@@ -117,6 +117,9 @@ function install_python() {
             echo_with_indentation " - $PYENV_BIN is already in PATH no further action need be taken."
         fi
     fi
+
+    echo_with_indentation " - Upgrading pip"
+    ${PYENV_BIN}/pip install --upgrade pip
 }
 
 function pyenv_executable_found() {
